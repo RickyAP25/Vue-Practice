@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body> 
+    
+    <h1 id="heading">Ini heading</h1>
+    <input type="text" name="" id="text-input" placeholder="input your text">
+    <!-- <input type="button" name="" id="button"> -->
+
+    <!-- GPT Vue -->
+    <!-- <div id="app">
+        <h1>{{ headingText }}</h1>
+        <input type="text" v-model="headingText" placeholder="Type here...">
+    </div> -->
+
+
+    <div id="app" v-cloak>
+        <h1>{{ message }}</h1>
+        <input @keyup.enter="greet" v-model="message" type="text" placeholder="Type here">
+        
+        <login-form>
+
+        <hr>
+        
+        <button @click.left="toogleBox">Show Box</button>
+        <div v-if="isVisible" class="box"></div>
+        <!-- <div v-else-if="isVisible2" class="box2"></div> --> 
+        <!-- <div v-else="isVisible" class="box3"></div> -->
+        <!-- <div v-show="isVisible" class="box"></div> -->
+        
+    </div>
+
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
